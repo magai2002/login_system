@@ -39,3 +39,7 @@ def register(request):
 
 def homePage(request):
 	return render(request, 'home.html', {})
+
+def logoutUser(request):
+	logout(request)
+	return redirect('login')

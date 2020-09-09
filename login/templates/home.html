@@ -30,24 +30,18 @@
 		<div class="container-login100">
 			<div class="wrap-login100 p-l-50 p-r-50 p-t-77 p-b-30">
 				<span class="login100-form-title p-b-55">
-						Welcome Username! You are logged in!!!
+						Welcome {{ request.user }}! You are logged in!!!
 				</span>
 
-				<div class="wrap-login100-form-btn">
-					<div class="login100-form-bgbtn"></div>
-							<a href="{% url 'login' %}" >
-								Login
-							</a>
+				<div class="text-center w-full p-t-115">
+						<span class="txt1">
+							To Log Out
+						</span>
+
+						<a class="txt1 bo1 hov1" href="{% url 'logout' %}">
+							Click Here						
+						</a>
 					</div>
-
-<br><br>
-
-				<div class="wrap-login100-form-btn">
-					<div class="login100-form-bgbtn"></div>
-
-							<a href="{% url 'register' %}">
-								Sign Up
-							</a>
 					</div>
 			</div>
 		</div>
